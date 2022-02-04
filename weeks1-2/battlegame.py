@@ -1,4 +1,5 @@
 #This is just a comment
+#This is another comment
 
 wizard = "Wizard"
 elf = "Elf"
