@@ -32,7 +32,7 @@ while True:
             donation = donate(authorized_user)
             donations.append(donation)
     elif choice == 4:
-        print("TODO: Write show donations functionality")
+        show_donations(donations)
     else:
         print("Leaving DonateMe")
         break
