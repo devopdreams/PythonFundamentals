@@ -14,6 +14,7 @@ while True:
         print("Logged in as :", authorized_user)
 
     choice = int(input("Choose an option: "))
+    print("\n")
     if choice == 1:
         username = input("Enter username: ")
         password = input("Enter password: ")
@@ -21,7 +22,10 @@ while True:
     elif choice == 2:
         username = input("Enter username: ")
         password = input("Enter password: ")
-        print("Write register functionality")
+        authorized_user = register(database, username)
+        if len(authorized_user) > 0:
+            database[authorized_user] = password
+            print(database)
     elif choice == 3:
         print("TODO: Write donate functionality")
     elif choice == 4:
