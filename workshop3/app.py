@@ -1,4 +1,5 @@
 from donations_pkg.homepage import *
+from donations_pkg.user import *
 
 
 database = {"admin": "password123"}
@@ -14,9 +15,13 @@ while True:
 
     choice = int(input("Choose an option: "))
     if choice == 1:
-        print("TODO: Write Login Functionality")
+        username = input("Enter username: ")
+        password = input("Enter password: ")
+        authorized_user = login(database, username, password)
     elif choice == 2:
-        print("TODO: Write register functionality")
+        username = input("Enter username: ")
+        password = input("Enter password: ")
+        print("Write register functionality")
     elif choice == 3:
         print("TODO: Write donate functionality")
     elif choice == 4:
