@@ -25,9 +25,12 @@ while True:
         authorized_user = register(database, username)
         if len(authorized_user) > 0:
             database[authorized_user] = password
-            print(database)
     elif choice == 3:
-        print("TODO: Write donate functionality")
+        if not len(authorized_user) > 0:
+            print("You must be logged in to donate.")
+        else:
+            donation = donate(authorized_user)
+            donations.append(donation)
     elif choice == 4:
         print("TODO: Write show donations functionality")
     else:

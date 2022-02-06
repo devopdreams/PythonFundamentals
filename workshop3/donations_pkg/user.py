@@ -6,10 +6,10 @@ def login(database, username, password):
         return username
     elif (username in database) and not(password == database[username]):
         print("Password incorrect, try again", username)
-        return
+        return ""
     else:
         print("User not found. Please register")
-        return
+        return ""
 
 
 def register(database, username):
@@ -18,4 +18,4 @@ def register(database, username):
         return ""
     else:
         print("Username", username, "registered")
-        return(username)
+        return username
